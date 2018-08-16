@@ -140,7 +140,7 @@ Try {
 
 		## <Perform Installation tasks here>
 		Execute-Process -Path "$dirFiles\GrabCAD-Print-Installer-PerMachine.exe" -Parameters '/quiet' -WindowStyle 'Hidden' -PassThru
-		Remove-File -Path "$envCommonDesktop\GrabCAD Print.lnk"
+
 
 		##*===============================================
 		##* POST-INSTALLATION
@@ -183,6 +183,7 @@ Try {
 
 		# <Perform Uninstallation tasks here>
 		Execute-Process -Path "$dirFiles\GrabCAD-Print-Installer-PerMachine.exe" -Parameters '/uninstall /quiet' -WindowStyle 'Hidden' -PassThru
+		Remove-File -Path "$envCommonDesktop\GrabCAD Print.lnk"
 
 		##*===============================================
 		##* POST-UNINSTALLATION
