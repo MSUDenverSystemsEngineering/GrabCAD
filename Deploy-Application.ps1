@@ -145,7 +145,7 @@ Try {
 
 		ForEach($installedApplication in $applicationList) {
 			If (Get-InstalledApplication -Name $installedApplication) {
-				$exitCode = Remove-MSIApplications -Name $installedApplication -FilterApplication (,('Publisher', 'Stratasys', 'Exact')) -IgnoreExitCode "1605" -PassThru
+				$exitCode = Remove-MSIApplications -Name $installedApplication -FilterApplication (,('Publisher', 'Stratasys', 'Exact')) -PassThru
 				If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 			}
 		}
@@ -281,8 +281,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUhujjipWDXZcOfWEudZxHPEc8
-# diugghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQU0B1JXbK5Akf2kS0dMqkACvZF
+# RBegghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -382,13 +382,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFFjUIJqiShZkKJf5O+jK1PDrUv6/MA0GCSqGSIb3DQEBAQUABIIBgCa5YkEs
-# 5KrQMPvNq8lkISVeKyLuSqHbXShuzKiCT42MP9C9ubW7TbrY8EEwzAks1nzkMWq3
-# VJfqAz+zpBRjtwpcljsMppVoXPi91R+5FneaKU7edkMKQjJXKg/fAtI7Sjz3LYZ+
-# erd7wm7rWqTorcM9cbDg/63cf6eFj4Bbr3UPQEuc58IrYVw5nY5GqV2LeHTKm3Cb
-# 0RxvyIbAK2YE1NI2KhYmUYZ097Gm7dKvDHFkHsK+7IPozP7B9V9NUAGW95LnGu3D
-# O7+g73vAjIcnuU8l5BEOfqOZsGMiy/ppurj/uaIqQwx5yImTKXDH5O75kfhedzGK
-# HAFWpYxUhQtUYCgeC2XqmQk9z09FdRNw4VtQlOT/nnN1Uq+IO0BnZoeDS0BspTXl
-# WGC2v2bGOfPS/6OsiELhqywbZ79q1xRIw7Rf/l7jCr7Akn1i/GGFe4fGrmah1WVr
-# JNj08yZ5epEdX5m8w0foEMQBNVeW1Nte71fVJIDd4ef/zbZDcNmurnx54g==
+# MRYEFBkX3VRNvDXPAqRNUc+HCgt3hspXMA0GCSqGSIb3DQEBAQUABIIBgEJ2/o3i
+# WFgyuyKLqaNnqtz0cF6PuKNFJSb/XgaqrgcjhOeiiatHfWS1l1UvAN4Sr+qHjHd2
+# 8VjWg3cZH1k+hPNjOuDKxRk6iv807Jv8mKbLkiO46Udevp8xEbmqNXbUuU7GQwUm
+# TeY1olXZmhgDEQcL5jmIhXSmb1V5meHn9H/Ddt80UseVzdFFxFcKjU5VWott8753
+# L7sAuruJ/eQH/fvhV5sZ9IRhCco37qODMgukKBtm55IbHewnJKHdEUqxIUBDYye+
+# Zc8zWnE1NCv7+yGEQfCW5/BMMhkuL+MohYfbU2W3jN3vJVebl6JQIgeT2Z49vB0o
+# f9yg29VzqwWLoceU0hTP9BC1w20qNQ3cLZSo+QkIUtU+N8RPl2nOl0IiUZwIVCPN
+# Ix0/lbHefz0KsgW5XmkD/Z/Ojq09eyXImNGS7Er0/nU3c9n6fShrPMLRlTvFD692
+# G5+GmNwfxVgZQIniB5qsHK7EpVv6ZwT+ZUIJq+i25LB8CHVSK0lnuR1S9w==
 # SIG # End signature block
